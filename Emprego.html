@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net.empregos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Mystyle.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand ">
+            <div class="container">
+                <a href="Index.html">
+                    <img src="img/logo.png" alt="logo" class="navbar-brand">
+                </a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Registar</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="down-nav">
+            <ul class="nav nav-pills nav-fill container">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="UltOfertas.html">Ultimas
+                        Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Emprego.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Emprego.html">Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Favoritos.html">Favoritos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="pesquisa p-5">
+            <h3 class="tittle text-center font-weight-bold pb-4">Pesquisar Ofertas de Emprego</h3>
+            <div class="pesquisa-container row my-0 mx-auto">
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-funcao" class="pesquisar-input" type="text"
+                        placeholder="Insira a Função">
+
+                </div>
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-local" class="pesquisar-input" type="text" placeholder="Insira o Local">
+                </div>
+                <div class="col-md-3 col-12">
+                    <button type="button"
+                        class="btn btn-dark pesquisar-btn font-weight-bold border-0 ">Procurar</button>
+                </div>
+            </div>
+        </div>
+        <div class="anuncio py-5">
+            <h3 class="tittle text-center font-weight-bold">Coordenador de Engenharia</h3>
+            <div class="anuncio-container">
+                <div class="col">
+                    <div class="text-inform mt-5 p-4 mx-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="button" class="btn btn-dark"
+                                    onclick="alterar_visibilidade('tabelaEmprego');" value="Resumo" />
+                            </div>
+                            <div class="col-6 ">
+                                <input type="button" class="btn btn-dark float-right" id="btn-favorito"
+                                    value="Adicionar Favorito" />
+                            </div>
+                        </div>
+
+                        <div class="informacoes-container row m-0 mt-2 " id="tabelaEmprego">
+                            <div class="col-12">
+                                <table class="table mb-5">
+                                    <tr>
+                                        <th class="table1 text-uppercase">Titulo Emprego</th>
+                                        <th class="table2 font-weight-lighter">Coordenador Engenharia</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase">Nome da Empresa</th>
+                                        <th class="table2 font-weight-lighter">Efacec</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase">Localização</th>
+                                        <th class="table2 font-weight-lighter">Porto</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase">Experiência</th>
+                                        <th class="table2 font-weight-lighter">3 anos</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase">Email Candidatura</th>
+                                        <th class="table2 font-weight-lighter">efacecandidaturas@hotmail.com</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase">Data Limite</th>
+                                        <th class="table2 font-weight-lighter">03/02/2020</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase ">Descrição</th>
+                                        <th class="table2 font-weight-lighter">Definir ou contribuir para a definição da
+                                            estratégia de Business Development de determinado Negócio/Mercado,
+                                            trabalhando
+                                            continuamente para o atingimento dos objetivos previamente definidos do
+                                            Grupo e a rentabilização dos seus resultados.
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="table1 text-uppercase ">Ultima atualização</th>
+                                        <th class="table2 font-weight-lighter">16/01/2020</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <h3 class="tittle text-center">Anúncio<br><br></h3>
+                        <p>Efacec é a maior empresa industrial em Portugal nos setores elétrico e eletro-mecânico,
+                            desenvolvendo produtos e
+                            soluções hi-tech, e sistemas que são parte do dia a dia de milhões de pessoas em todo o
+                            mundo.</p>
+                        <h3 class="tittle text-center py-4">Função:</h3>
+                        <p>Para integração na nossa Unidade de Transportes, procuramos um profissional que terá como
+                            objetivo coordenar e
+                            supervisionar as atividades das áreas de engenharia de design e integração e monitorizar o
+                            desenvolvimento das soluções
+                            técnicas para os diversos projetos da UN.</p>
+                        <h3 class="tittle text-center py-4">Principais Responsabilidade:</h3>
+                        <ul>
+                            <li>Acompanhar e monitorizar as atividades desempenhadas pela equipa, nomeadamente,
+                                estabelecer e definir prioridades na
+                                realização das diversas tarefas e garantir a existência e a disponibilidade dos recursos
+                                necessários para a realização
+                                das mesmas.</li>
+                            <li>Assegurar o acompanhamento e controlo dos planos operacionais através dos respetivos
+                                indicadores de performance (KPIs),
+                                identificando eventuais desvios entre o real e o previsto;</li>
+                            <li>Acompanhar e monitorizar o planeamento de cada projeto de engenharia, efetuando a gestão
+                                da sua equipa do ponto de vista
+                                operacional;</li>
+                            <li>Prestar, sempre que necessário, informação e esclarecer conceitos técnicos junto da
+                                equipa comercial e dos gestores de
+                                projeto, com vista a permitir uma melhor e mais eficiente resposta às necessidades e
+                                especificações dos diversos
+                                clientes da UN;</li>
+                            <li>Realizar reuniões com fornecedores com vista a validar os materiais e os acessórios
+                                necessários ao desenvolvimento das
+                                diversas atividades;</li>
+                            <li>Realizar reuniões com fornecedores com vista a validar os materiais e os acessórios
+                                necessários ao desenvolvimento das
+                                diversas atividades;</li>
+                        </ul>
+                        <h3 class="tittle text-center py-4">Requisitos:</h3>
+                        <ul>
+                            <li>Licenciatura em Engenharia Eletrotécnica (Licenciatura Pré Bolonha ou Mestrado Pós
+                                Bolonha);</li>
+                            <li>Experiência mínima de 8 a 10 anos em funções similares, com experiência em coordenação
+                                de equipas de Engenharia e/ou
+                                gestão projetos;</li>
+                            <li>Conhecimentos em sistemas de tração e eletrificação em ferrovia/metros/tramway;</li>
+                            <li>Dinamismo e proatividade;</li>
+                            <li>Capacidade de resistência ao stress e à pressão;</li>
+                            <li>Fluência a Inglês;</li>
+                            <li>Disponibilidade para viajar.</li>
+                        </ul>
+                        <p><br><br>Trabalhamos diariamente em soluções de energia, ambiente e transportes que pretendem
+                            melhorar as vidas das pessoas em
+                            todo o mundo, através de diferentes competências e mais soluções inovadoras.</p>
+                        <p>Junta-te a uma organização comprometida com a criação de um mundo mais sustentável, que
+                            aposta na aprendizagem e no
+                            desenvolvimento contínuo das suas pessoas.<br><br></p>
+                        <div class="row ">
+                            <div class="col-6">
+                                <input type="button" class="btn btn-dark "
+                                    onclick="alterar_visibilidade('contactos-emprego');" value="Contactos" />
+                            </div>
+                            <div class="col-6 ">
+                                <input type="button" class="btn btn-dark float-right" value="Empresa"
+                                    onclick="location.href='Empresa.html';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="anuncio py-5" id="contactos-emprego">
+            <div class="social-emprego container mw-100 row">
+                <div class="col ml-5">
+                    <div class="social-icons-emprego ">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/whatsapp-emprego.svg"
+                                alt="facebook"></a>
+                    </div>
+                </div>
+                <div class="col ml-5">
+                    <div class="social-icons-emprego">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/facebook-emprego.svg"
+                                alt="facebook"></a>
+                    </div>
+                </div>
+                <div class="col ml-5 ">
+                    <div class="social-icons-emprego">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/linkedin-emprego.svg"
+                                alt="facebook"></a>
+                    </div>
+                </div>
+                <div class="col ml-5">
+                    <div class="social-icons-emprego">
+                        <a href="https://www.facebook.com/netempregos/"><img src="/img/gmail-emprego.svg"
+                                alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="anuncio">
+            <h3 class="tittle text-center pt-5 font-weight-bold">Ofertas semelhantes</h3>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade</h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista</h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade</h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista</h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-container row py-5 m-0">
+            <div class="col pagination justify-content-center">
+                <a href="#">&laquo;</a>
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <div class="publicidade p-5">
+            <div class="publicidade-container row my-0 mx-auto">
+                <div class="col">
+                    <a href=""><img src="img/publicidade3.PNG" alt="publicidade" class="pub"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Candidatos Registados</div>
+                    <div class="footer-text text-center text-light font-weight-bold">4 597 199</div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Redes Sociais</div>
+                    <div class="social-icons text-center text-light font-weight-bold">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/facebook.svg" alt="facebook"></a>
+                        <a
+                            href="https://twitter.com/netempregos?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                                src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="http://feeds.feedburner.com/Net-empregos"><img src="img/rss.svg" alt="Rss"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Empresas Registadas</div>
+                    <div class="footer-text text-center text-light font-weight-bold">208 955</div>
+                </div>
+                <div class="col-12">
+                    <p class="copyright text-light text-center">&copy; Copyright Net-Empregos.net 2019. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="MyFuctions.js"></script>
+
+    <script>
+
+        window.onload = ColocarLocalStorageOferta();;
+
+        
+            let adcFavoritosBotao = (ev) => {          
+
+            let favorito = {
+                id: Date.now(),
+                titulo: 'Coordenador de energia',
+                empresa: 'Efacec',
+                local: 'Porto',
+                descricao: `Para integração na nossa Unidade de Transportes, procuramos um profissional que terá como objetivo coordenar
+        e supervisionar as atividades das áreas de engenharia de design e integração e monitorizar o desenvolvimento
+        das soluções técnicas para os diversos projetos da UN.
+
+        Principais responsabilidades:
+
+        .Acompanhar e monitorizar as atividades desempenhadas pela equipa, nomeadamente, estabelecer e definir prioridades
+        na realização das diversas tarefas e garantir a existência e a disponibilidade dos recursos necessários para a realização das mesmas.
+        .Assegurar o acompanhamento e controlo dos planos operacionais através dos respetivos indicadores de performance (KPIs),
+        identificando eventuais desvios entre o real e o previsto;
+        .Acompanhar e monitorizar o planeamento de cada projeto de engenharia, efetuando a gestão da sua equipa do ponto de vista operacional;
+        .Prestar, sempre que necessário, informação e esclarecer conceitos técnicos junto da equipa comercial e dos gestores de projeto,
+        com vista a permitir uma melhor e mais eficiente resposta às necessidades e especificações dos diversos clientes da UN;
+        .Realizar reuniões com fornecedores com vista a validar os materiais e os acessórios necessários ao desenvolvimento das diversas atividades;
+        .Realizar reuniões com fornecedores com vista a validar os materiais e os acessórios necessários ao desenvolvimento das diversas atividades;
+        
+        Requesitos:
+
+        .Licenciatura em Engenharia Eletrotécnica (Licenciatura Pré Bolonha ou Mestrado Pós Bolonha);
+
+        .Experiência mínima de 8 a 10 anos em funções similares, com experiência em coordenação de equipas de Engenharia e/ou gestão projetos;
+        .Conhecimentos em sistemas de tração e eletrificação em ferrovia/metros/tramway;
+        .Dinamismo e proatividade;
+        .Capacidade de resistência ao stress e à pressão;
+        .Fluência a Inglês;
+        .Disponibilidade para viajar.
+
+        Trabalhamos diariamente em soluções de energia, ambiente e transportes que pretendem melhorar as vidas das pessoas em todo o mundo,
+        através de diferentes competências e mais soluções inovadoras.
+
+        Junta-te a uma organização comprometida com a criação de um mundo mais sustentável, que aposta na aprendizagem e no desenvolvimento
+        contínuo das suas pessoas.`,
+                experiencia: '3 anos ou mais',
+                email: 'efacecandidaturas@hotmail.com',
+                data: '03/02/2020',
+                entrevistas : [],
+                candidatura: {
+                    estado: false,
+                    data: null,
+                },
+                recrutamento:{
+                    estado: "Não defenido",
+                    data: "",
+                }, 
+                metodoInsercao: "botão de favoritos",
+            }
+
+            favoritos.push(favorito);
+            localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+            alert("Emprego adicionado aos favoritos!");
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('btn-favorito').addEventListener('click', adcFavoritosBotao);
+        })
+
+
+
+        function ColocarLocalStorageOferta() {
+
+            lerLocalStorage();
+
+            for (i = 0; i < arr.length; i++) {
+                favoritos.push(arr[i]);
+            }
+            localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+        }
+
+    </script>
+</body>
+
+</html>

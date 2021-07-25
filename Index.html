@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net.empregos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Mystyle.css">
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand ">
+            <div class="container">
+                <a href="Index.html">
+                    <img src="img/logo.png" alt="logo" class="navbar-brand">
+                </a>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Registar</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="down-nav">
+            <ul class="nav nav-pills nav-fill container">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="UltOfertas.html">Ultimas
+                        Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="#">Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Favoritos.html">Favoritos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="pesquisa p-5">
+            <h3 class="tittle text-center font-weight-bold pb-4">Pesquisar Ofertas de Emprego</h3>
+            <div class="pesquisa-container row my-0 mx-auto">
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-funcao" class="pesquisar-input" type="text"
+                        placeholder="Insira a Função">
+
+                </div>
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-local" class="pesquisar-input" type="text" placeholder="Insira o Local">
+                </div>
+                <div class="col-md-3 col-12">
+                    <button type="button"
+                        class="btn btn-dark pesquisar-btn font-weight-bold border-0 ">Procurar</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="tittle text-center pt-3 pb-4 font-weight-bold">Todas as Categorias Professionais</h3>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-group  list-unstyled p-0 mb-5 text-center">
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Agricultura /
+                                Florestas / Pescas</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Arquitectura /
+                                Design</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Artes / Entretenimento
+                                / Media</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Banca / Serviços
+                                Financeiros /</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Beleza / Moda</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Biotecnologia /
+                                Farmacia</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Call Center / Help
+                                Desk</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Comunicação Social</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Conservação /
+                                Manutenção</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Contabilidade /
+                                Finanças</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Desporto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-group list-unstyled p-0 mb-5 text-center">
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Direito / Justiça</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Educação /
+                                Formação</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Engenharia ( Ambiente
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Engenharia ( Civil
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Engenharia (
+                                Eletrotecnica )</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Engenharia ( Mecanica
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Engenharia ( Quimica
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Gestão de Empresas</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Hotelaria /
+                                TurismoImobiliário</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Indústria /
+                                Produção</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática ( Analise
+                                )</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-group list-unstyled p-0 mb-5 text-center">
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática (
+                                Comercial )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática ( Formação
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática ( Gestão
+                                de Redes)</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática ( Internet
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática (
+                                Multimedia )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática (
+                                Programação )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Informática ( Hardware
+                                )</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Lojas / Comércio /
+                                Balcão</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Limpezas /
+                                Domesticas</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Publicidade /
+                                Marketing</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Relações Públicas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-group list-unstyled p-0 mb-5 text-center">
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Restauração /
+                                Bares</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Saúde / Medicina /
+                                Enfermagem</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Secretariado /
+                                Administração</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Serviços Sociais</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Serviços Técnicos</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Telecomunicações</a>
+                        </li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Transportes /
+                                Logistica</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Restauração /
+                                Bares</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Limpezas /
+                                Domesticas</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">TécnicaConstrução
+                                Civil</a></li>
+                        <li><a href="Emprego.html" class="list-group-item list-group-item-action">Desporto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="publicidade p-5">
+            <div class="publicidade-container row my-0 mx-auto">
+                <div class="col">
+                    <a href=""><img src="img/publicdade2.PNG" alt="publicidade" class="pub"></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Candidatos Registados</div>
+                    <div class="footer-text text-center text-light font-weight-bold">4 597 199</div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Redes Sociais</div>
+                    <div class="social-icons text-center text-light font-weight-bold">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/facebook.svg" alt="facebook"></a>
+                        <a
+                            href="https://twitter.com/netempregos?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                                src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="http://feeds.feedburner.com/Net-empregos"><img src="img/rss.svg" alt="Rss"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Empresas Registadas</div>
+                    <div class="footer-text text-center text-light font-weight-bold">208 955</div>
+                </div>
+                <div class="col-12">
+                    <p class="copyright text-light text-center">&copy; Copyright Net-Empregos.net 2019. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="MyFuctions.js"></script>
+</body>
+
+</html>

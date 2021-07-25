@@ -1,0 +1,275 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    background-color: #f9f9ff;
+}
+
+.navbar {
+    background-color: #01265d;
+}
+
+.btn-primary {
+    background-color: #497dcc;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    max-height: 65px;
+}
+
+.nav-item:first-of-type {
+    margin-right: 15px;
+}
+
+.nav-item:last-of-type {
+    margin-left: 15px;
+}
+
+.down-nav {
+    background-color: #497dcc;
+}
+
+footer {
+    background-color: #071831;
+    padding: 55px 0 39px;
+}
+
+.footer-title, .footer-text {
+    font-size: 1.18em;
+}
+
+.footer-text {
+    font-size: 1.56em;
+    margin-top: 10px;
+}
+
+.copyright {
+    margin-top: 50px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a:nth-child(2) {
+    margin: 0 8px;
+}
+
+.social-icons-emprego {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.tittle {
+    font-size: 1.3em;
+    color: #071831
+}
+
+.list-group {
+    color: #071831;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.pesquisa {
+    background-color: #fff;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.pesquisa-container {
+    max-width: 700px;
+}
+
+.pesquisar-input, .pesquisar-btn {
+    width: 100%;
+    height: 44px;
+}
+
+.pesquisar-input {
+    border: 1px solid #d3c8c8;
+    color: #071831;
+    font-size: 0.95em;
+}
+
+#pesquisar-input-funcao, #pesquisar-input-local {
+    background-size: 1.1em !important;
+    padding: 0 10px 0 30px;
+}
+
+#pesquisar-input-funcao {
+    background: #f9f9ff url(img/lupa.svg) no-repeat scroll 8px 13px;
+}
+
+#pesquisar-input-local {
+    background: #f9f9ff url(img/local.svg) no-repeat scroll 8px 9px;
+}
+
+.publicidade {
+    background-color: #fff;
+}
+
+.publicidade-container {
+    max-width: 700px;
+}
+
+.pub {
+    max-width: 100%;
+}
+
+.ultimas-ofertas {
+    background-color: #fff;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.ultimas-ofertas-container {
+    background-color: #fff;
+    width: 100%;
+}
+
+.card {
+    background-color: #f9f9ff;
+    color: #071831;
+}
+
+.text-inform {
+    background-color: #f9f9ff;
+}
+
+.text-inform a {
+    color: #071831;
+}
+
+.anuncio {
+    background-color: #fff;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.anuncio li {
+    padding: 10px 0;
+}
+
+.informacoes {
+    background-color: #fff;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.10);
+}
+
+.logo-efacec {
+    max-height: 100px;
+}
+
+.informacoes-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    background-color: #f9f9ff;
+}
+
+.table th, td {
+    border: 1px solid #071831;
+}
+
+.table1 {
+    background-color: #DAD7E2;
+}
+
+.pagination-container {
+    width: 100%;
+    background-color: #fff;
+}
+
+.pagination-container a {
+    color: #071831;
+    background-color: #f9f9ff;
+    padding: 8px 16px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.pagination-container a.active {
+    background-color: #071831;
+    color: #fff;
+}
+
+.pagination-container a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.btn-favorite {
+    position: absolute;
+    font-weight: 800;
+    padding: 2px 0;
+    width: 30px;
+    height: 50px;
+    font-size: 24pt;
+    margin-top: 0px;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+}
+
+.btn-favorite1 {
+    position: absolute;
+    font-weight: 800;
+    padding: 10px 0;
+    width: 30px;
+    height: 50px;
+    font-size: 15pt;
+    margin-top: 0px;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+}
+
+#tabelaEmprego, #contactos-emprego, #EmpregosExpirados, #EntrevistaMarcada, #AguardandoResposta {
+    display: none;
+}
+
+#tEmpregosValidos {
+    display: block;
+}
+
+.fav-tab-container {
+    background-color: #fff;
+}
+
+.form-group {
+    padding: 5px 50px;
+}
+
+.form-title {
+    font-size: 1.1em;
+    color: #071831;
+    font-weight: 600;
+    ;
+}
+
+.modal-header, .modal-footer {
+    background-color: #071831;
+}
+
+.modal-title {
+    color: #fff;
+}
+
+.form-control {
+    background-color: #f9f9ff;
+}
+
+.container-branco {
+    background-color: #fff;
+}
+
+.fav-tab tr {
+    cursor: pointer;
+}
+
+.fav-tab tr:hover {
+    background-color: #fff;
+}

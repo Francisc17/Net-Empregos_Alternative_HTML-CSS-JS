@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net.empregos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Mystyle.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand ">
+            <div class="container">
+                <a href="Index.html">
+                    <img src="img/logo.png" alt="logo" class="navbar-brand">
+                </a>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Registar</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="down-nav">
+            <ul class="nav nav-pills nav-fill container">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="UltOfertas.html">Ultimas
+                        Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="#">Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Favoritos.html">Favoritos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="pesquisa p-5">
+            <h3 class="tittle text-center font-weight-bold pb-4">Pesquisar Ofertas de Emprego</h3>
+            <div class="pesquisa-container row my-0 mx-auto">
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-funcao" class="pesquisar-input" type="text"
+                        placeholder="Insira a Função">
+
+                </div>
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-local" class="pesquisar-input" type="text" placeholder="Insira o Local">
+                </div>
+                <div class="col-md-3 col-12">
+                    <button type="button"
+                        class="btn btn-dark pesquisar-btn font-weight-bold border-0 ">Procurar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="anuncio py-5">
+            <h3 class="tittle text-center font-weight-bold">Ofertas Favoritas</h3>
+            <div class="container">
+                <div class="row grupo-botoes pt-5">
+                    <a class="col-md col-12 btn btn-dark mr-1" href="javascript:void(0)"
+                        onclick="alterar_visibilidade_favoritos('EmpregosValidos','EmpregosExpirados','EntrevistaMarcada','AguardandoResposta');">Válidas</a>
+                    <a class="col-md col-12 btn btn-dark mr-1"
+                        onclick="alterar_visibilidade_favoritos('EmpregosExpirados','EmpregosValidos','AguardandoResposta','EntrevistaMarcada');"
+                        href=" javascript:void(0)">Expiradas</a>
+                    <a class="col-md col-12 btn btn-dark mr-1" href="javascript:void(0)"
+                        onclick="alterar_visibilidade_favoritos('AguardandoResposta','EmpregosExpirados','EmpregosValidos','EntrevistaMarcada');">
+                        Candidaturas</a>
+                    <a class="col-md col-12 btn btn-dark " href="javascript:void(0)"
+                        onclick="alterar_visibilidade_favoritos('EntrevistaMarcada','EmpregosValidos','EmpregosExpirados','AguardandoResposta');">Entrevistas
+                        Futuras</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="fav-tab-container row m-0 " id="EmpregosValidos">
+            <div class="col">
+                <h3 class="text-center font-weight-bold pb-4">Empregos válidos</h3>
+                <div class="table-responsive">
+                    <table class="table fav-tab" id="Empregos-Validos-tabela">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Função</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data Limite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="fav-tab-container row m-0 " id="EmpregosExpirados">
+            <div class="col">
+                <h3 class="text-center font-weight-bold pb-4">Empregos Expirados</h3>
+                <div class="table-responsive table-hover fav-tab">
+                    <table class="table" id="Empregos-Expirados-tabela">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Função</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data Limite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="fav-tab-container row m-0 " id="EntrevistaMarcada">
+            <div class="col">
+                <h3 class="text-center font-weight-bold pb-4">Entrevistas Futuras</h3>
+                <div class="table-responsive table-hover fav-tab">
+                    <table class="table" id="Entrevista-Marcada-Tabela">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Função</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="fav-tab-container row m-0 " id="AguardandoResposta">
+            <div class="col">
+                <h3 class="text-center font-weight-bold pb-4">Candidaturas</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover fav-tab" id="Candidaturas-Tabela">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Função</th>
+                                <th scope="col">Empresa </th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-branco">
+            <div class="container pt-3 pb-5">
+                <div class="row justify-content-center">
+                    <a class="col-md-2 col-12 ml-1 mr-1  btn btn-dark" href="javascript:void(0)" data-toggle="modal"
+                        data-target="#exampleModal">Adicionar Oferta</a>
+                    <a class="col-md-2 col-12 ml-1 mr-1 btn btn-dark" onclick="LimparTabela()"
+                        href="javascript:void(0)">Limpar
+                        Tabelas</a>
+                </div>
+            </div>
+        </div>
+        <div class="publicidade p-5">
+            <div class="publicidade-container row my-0 mx-auto">
+                <div class="col">
+                    <a href=""><img src="img/publicdade2.PNG" alt="publicidade" class="pub"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Candidatos Registados</div>
+                    <div class="footer-text text-center text-light font-weight-bold">4 597 199</div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Redes Sociais</div>
+                    <div class="social-icons text-center text-light font-weight-bold">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/facebook.svg" alt="facebook"></a>
+                        <a
+                            href="https://twitter.com/netempregos?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                                src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="http://feeds.feedburner.com/Net-empregos"><img src="img/rss.svg" alt="Rss"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Empresas Registadas</div>
+                    <div class="footer-text text-center text-light font-weight-bold">208 955</div>
+                </div>
+                <div class="col-12">
+                    <p class="copyright text-light text-center">&copy; Copyright Net-Empregos.net 2019. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Modal -->
+                <div class="modal fade-" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="col-12 modal-title text-center font-weight-bold" id="exampleModalLabel">
+                                    Adicionar Emprego</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="NomeEmprego">
+                                                Emprego
+                                            </label>
+                                        </div>
+                                        <input type="text" class="form-control" id="NomeEmprego"
+                                            placeholder="Introduza o nome do emprego">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="NomeEmpresa">
+                                                Empresa
+                                            </label>
+                                        </div>
+                                        <input type="text" class="form-control" id="NomeEmpresa"
+                                            placeholder="Introduza o nome da empresa">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="Morada">
+                                                Morada
+                                            </label>
+                                        </div>
+                                        <input type="text" class="form-control" id="Morada" placeholder="Morada">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="Descricao-emprego">
+                                                Descrição
+                                            </label>
+                                        </div>
+                                        <textarea class="col-12 form-control" id="Descricao-emprego" rows="5"
+                                            placeholder="Descrição do emprego"></textarea>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="AnosExperiencia">
+                                                Anos de experiência exigidos
+                                            </label>
+                                        </div>
+                                        <select class="form-control" id="AnosExperiencia">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10+</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="Email">
+                                                Email para candidatura
+                                            </label>
+                                        </div>
+                                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                                            placeholder="Introduzir email que possibilita a sua candidatura">
+                                        <small id="emailHelp" class="form-text text-muted">O seu email não será
+                                            revelado para nínguem.</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-title text-center">
+                                            <label for="DataLimite">Data Limite</label>
+                                        </div>
+                                        <input type="text" class="form-control" id="DataLimite"
+                                            placeholder="formato dd/mm/aaaa">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Receber notificação por
+                                            email</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-light font-weight-bold"
+                                    data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-sm btn-light font-weight-bold "
+                                    id="btn-enviar">Guardar
+                                    Emprego</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal do form da entrevista-->
+
+    <div class="modal fade-" id="entrevistaModal" tabindex="-1" role="dialog" aria-labelledby="entrevistaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="col-12 modal-title text-center font-weight-bold" id="entrevistaModalLabel">
+                        Adicionar Entrevista</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="form-group">
+                            <div class="form-title text-center">
+                                <label for="DataEntrevista">
+                                    Data
+                                </label>
+                            </div>
+                            <input type="text" class="form-control" id="DataEntrevista"
+                                placeholder="formato dd/mm/aaaa">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-title text-center">
+                                <label for="HoraEntrevista">
+                                    Hora
+                                </label>
+                            </div>
+                            <input type="text" class="form-control" id="HoraEntrevista" placeholder="formato hh:mm">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-title text-center">
+                                <label for="Notas-Entrevista">
+                                    Descrição
+                                </label>
+                            </div>
+                            <textarea class="col-12 form-control" id="Notas-Entrevista" rows="5"
+                                placeholder="Aponte o que quiser sobre a entrevista"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold"
+                        data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold " id="btn-formEntrevista"
+                        onclick="AdcTabelaEntrevistas()">Guardar
+                        entrevista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal para a candidatura-->
+    <div class="modal fade-" id="candidaturaModal" tabindex="-1" role="dialog" aria-labelledby="candidaturaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="col-12 modal-title text-center font-weight-bold" id="candidaturaModalLabel">
+                        Candidatura</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="form-group">
+                            <div class="form-title text-center">
+                                <label for="DataCandidatura">
+                                    Data
+                                </label>
+                            </div>
+                            <input type="text" class="form-control" id="DataCandidatura"
+                                placeholder="formato dd/mm/aaaa">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold"
+                        data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold " id="btn-formCandidatura"
+                        onclick="AdcTabelaCandidato()">Guardar candidatura</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal para recrutamento-->
+
+    <div class="modal fade-" id="recrutamentoModal" tabindex="-1" role="dialog" aria-labelledby="recrutamentoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="col-12 modal-title text-center font-weight-bold" id="recrutamentoModalLabel">
+                        Estado</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="form-status">
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <div class="form-title text-center">
+                                    <label for="estadoRecrutamentoLabel">
+                                        Estado do recrutamento
+                                    </label>
+                                </div>
+                                <input type="text" list="cars" class="form-control" id="estadoRecrutamentoLabel" />
+                                <datalist id="cars">
+                                    <option>Aceite</option>
+                                    <option>Rejeitado</option>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-title text-center">
+                                    <label for="DataRecrutamento">
+                                        Data
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" id="DataRecrutamento"
+                                    placeholder="formato dd/mm/aaaa">
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold"
+                        data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-sm btn-light font-weight-bold " id="btn-formRecrutamento"
+                        onclick="AlterarEstado()">Guardar estado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal para ser criado dinamicamente-->
+    <div id="ModalDescricao">
+    </div>
+
+    <script src="MyFuctions.js"></script>
+
+    <script>
+
+        window.onload = LerSepararConteudo();   // correr quando abro a janela
+
+        let adcFavoritos = (ev) => {
+            ev.preventDefault();
+
+            let favorito = {
+                id: Date.now(),
+                titulo: document.getElementById('NomeEmprego').value,
+                empresa: document.getElementById('NomeEmpresa').value,
+                local: document.getElementById('Morada').value,
+                descricao: document.getElementById('Descricao-emprego').value,
+                experiencia: document.getElementById('AnosExperiencia').value,
+                email: document.getElementById('Email').value,
+                data: document.getElementById('DataLimite').value,
+                entrevistas: [],
+                candidatura: {
+                    estado: false,
+                    data: null,
+                },
+                recrutamento: {
+                    estado: "Não defenido",
+                    data: "",
+                },
+                metodoInsercao: "Formulario"
+            }
+            if (VerificarData(favorito.data) && favorito.titulo != "" && favorito.empresa != "" && favorito.local != "" &&
+                favorito.descricao != "" && favorito.experiencia != "" && favorito.email != "" && favorito.data != "") { //tudo tem de estar preenchido
+                favoritos.push(favorito);
+                localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+                alert("formulário validado com sucesso!");
+                location.reload();
+            } else {
+                alert("Tipo de dados inválidos em um dos campos do formulário -> certefique-se de usar o tipo de dados pedido!");
+            }
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {  //DOMContentLoaded -> todos os componentes da páginas foram carregados
+            document.getElementById('btn-enviar').addEventListener('click', adcFavoritos);
+        })
+
+
+        //carrega as tabelas de cada array para a sua tabela correspondente
+
+        function carregarTabelaValidas() { 
+
+            lerLocalStorage();
+
+            for (i = 0; i < validas.length; i++) {
+                CriarTabela(validas[i].titulo, validas[i].empresa, validas[i].local, validas[i].data);
+            }
+        }
+
+        function carregarTabelaEntrevistas() {
+            for (i = 0; i < entrevistas.length; i++) {
+                
+                    CriarTabelaEntrevistas(entrevistas[i].titulo, entrevistas[i].local, entrevistas[i].entrevistas[0].data, entrevistas[i].entrevistas[0].hora);
+                
+            }
+        }
+
+        function carregarTabelaExpiradas() {
+            for (i = 0; i < expiradas.length; i++) {
+                CriarTabelaExpiradas(expiradas[i].titulo, expiradas[i].empresa, expiradas[i].local, expiradas[i].data);
+            }
+        }
+
+        function carregarTabelaCandidaturas() {
+            for (i = 0; i < candidaturas.length; i++)
+                CriarTabelaCandidaturas(candidaturas[i].titulo, candidaturas[i].local, candidaturas[i].empresa, candidaturas[i].candidatura.data);
+        }
+
+
+
+        function LerSepararConteudo() {     // le do local storage, carrega para uma array arr e separa para as arrays que depois serão lidas para cada tabela
+
+            lerLocalStorage();
+
+            let hoje = HoraAtual();
+
+
+            for (i = 0; i < arr.length; i++) {
+
+                favoritos.push(arr[i]); // array com todas as ofertas
+
+                if (arr[i].candidatura.estado == true) {
+                    candidaturas.push(arr[i]);     // array so com as candidaturas
+                }
+
+                for (z = 0; z < arr[i].entrevistas.length; z++)
+                    if (CompararDatas(arr[i].entrevistas[z].data, hoje)) {
+                        entrevistas.push(arr[i]);  //array so com as entrevistas
+                    }
+
+                if (CompararDatas(arr[i].data, hoje))
+                    validas.push(arr[i]);  //array so com as ofertas validas
+                else if (!CompararDatas(arr[i].data, hoje) && arr[i].candidatura.estado == false)
+                    expiradas.push(arr[i]); //array so com as ofertas expiradas
+            }
+
+            //carregar os conteudos para cada tabela respetivamente
+            carregarTabelaValidas();
+
+            carregarTabelaExpiradas();
+
+            carregarTabelaEntrevistas();
+
+            carregarTabelaCandidaturas();
+
+            //função que permite obter o id das diferentes tabelas para sabermos em que tabela estamos a clicar
+            ObterId("linhaF:", "linhaE:", "linhaX:", "linhaC:");
+        }
+
+        //adicionar entrevistas
+        function AdcTabelaEntrevistas() {
+            let indice = nlinha - 1;
+
+            data = document.getElementById('DataEntrevista').value;
+            hora = document.getElementById('HoraEntrevista').value;
+            observacoes = document.getElementById('Notas-Entrevista').value;
+
+            if (VerificarData(data) && VerificarHora(hora)) {
+                CriarEntrevista(data, hora, observacoes, indice); //chama a função que vai criar a entrevista
+                localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+                alert("formulário validado com sucesso!");
+                location.reload();
+            } else {
+                alert("Tipo de dados inválidos em um dos campos do formulário -> certefique-se de usar o tipo de dados pedido!");
+            }
+        }
+
+        //adicionar na tabela candidaturas
+        function AdcTabelaCandidato() {
+            let indice = nlinha - 1;
+
+            favoritos[indice].candidatura.data = document.getElementById('DataCandidatura').value;
+            favoritos[indice].candidatura.estado = true;
+
+            if (VerificarData(favoritos[indice].candidatura.data)) {
+                localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+                alert("formulário validado com sucesso!");
+                location.reload();
+            } else {
+                alert("Tipo de dados inválidos em um dos campos do formulário -> certefique-se de usar o tipo de dados pedido!");
+            }
+        }
+
+        //opções de recrutamento
+        function AlterarEstado() {
+            let indice = nlinha - 1;
+
+            favoritos[indice].recrutamento.estado = document.getElementById('estadoRecrutamentoLabel').value;
+            data = favoritos[indice].recrutamento.data = document.getElementById('DataRecrutamento').value;
+
+            if (VerificarData(data)) {
+                localStorage.setItem('ListaFavoritos', JSON.stringify(favoritos));
+                alert("formulário validado com sucesso!");
+                location.reload();
+            } else {
+                alert("Tipo de dados inválidos em um dos campos do formulário -> certefique-se de usar o tipo de dados pedido!");
+            }
+        }
+
+
+    </script>
+</body>
+
+
+</html>

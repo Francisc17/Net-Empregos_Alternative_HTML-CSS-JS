@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net.empregos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Mystyle.css">
+  
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand ">
+            <div class="container">
+                <a href="Index.html">
+                    <img src="img/logo.png" alt="logo" class="navbar-brand">
+                </a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary font-weight-bold btn-block"
+                            aria-pressed="true">Registar</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="down-nav">
+            <ul class="nav nav-pills nav-fill container">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="UltOfertas.html">Ultimas
+                        Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Emprego.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Emprego.html">Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-light text-uppercase" href="Favoritos.html">Favoritos</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <div class="pesquisa p-5">
+            <h3 class="tittle text-center font-weight-bold pb-4">Pesquisar Ofertas de Emprego</h3>
+            <div class="pesquisa-container row my-0 mx-auto">
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-funcao" class="pesquisar-input" type="text"
+                        placeholder="Insira a Função">
+
+                </div>
+                <div class="col-md-4 col-12">
+                    <input id="pesquisar-input-local" class="pesquisar-input" type="text" placeholder="Insira o Local">
+                </div>
+                <div class="col-md-3 col-12">
+                    <button type="button"
+                        class="btn btn-dark pesquisar-btn font-weight-bold border-0 ">Procurar</button>
+                </div>
+            </div>
+        </div>
+        <div class="ultimas-ofertas py-5">
+            <h3 class="text-center font-weight-bold">Ultimas Ofertas de Emprego</h3>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade
+                        </h5>
+
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/02/2020</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Técnico de Contabilidade (m/f)
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: Mccastro</p>
+                            <p class="card-text">Data: 24/02/2029</p>
+                            <p class="card-text">Categoria: Contabilidade/finanças</p>
+                            <a href="Emprego1.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ultimas-ofertas-container m-0 row">
+                <div class="col ml-5 mr-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Oficiais de Eletricidade
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mr-5 ml-2">
+                    <div class="card text-center mt-5">
+                        <h5 class="card-header font-weight-bold">Eletricista
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">Zona: Porto</p>
+                            <p class="card-text">Empresa: ElectroSafe</p>
+                            <p class="card-text">Data: 16/11/2019</p>
+                            <p class="card-text">Categoria: Conservação/Manutenção/Técnica</p>
+                            <a href="Emprego.html" class="btn btn-dark border-0">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publicidade p-5">
+            <div class="publicidade-container row my-0 mx-auto">
+                <div class="col">
+                    <a href=""><img src="img/publicidade3.PNG" alt="publicidade" class="pub"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Candidatos Registados</div>
+                    <div class="footer-text text-center text-light font-weight-bold">4 597 199</div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Redes Sociais</div>
+                    <div class="social-icons text-center text-light font-weight-bold">
+                        <a href="https://www.facebook.com/netempregos/"><img src="img/facebook.svg" alt="facebook"></a>
+                        <a
+                            href="https://twitter.com/netempregos?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                                src="img/twitter.svg" alt="Twitter"></a>
+                        <a href="http://feeds.feedburner.com/Net-empregos"><img src="img/rss.svg" alt="Rss"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-title text-center text-light font-weight-bold">Empresas Registadas</div>
+                    <div class="footer-text text-center text-light font-weight-bold">208 955</div>
+                </div>
+                <div class="col-12">
+                    <p class="copyright text-light text-center">&copy; Copyright Net-Empregos.net 2019. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="MyFuctions.js"></script>
+</body>
+
+</html>
